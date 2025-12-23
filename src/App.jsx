@@ -28,8 +28,8 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-xl text-gray-600">Loading...</div>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+        <div className="text-xl text-gray-600 dark:text-gray-400">Loading...</div>
       </div>
     );
   }
@@ -39,12 +39,12 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
       <div className="max-w-4xl mx-auto p-6">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-4xl font-bold text-gray-800 mb-2">Habit Tracker</h1>
-            <p className="text-gray-600">Welcome back, {user.email}!</p>
+            <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-2">Habit Tracker</h1>
+            <p className="text-gray-600 dark:text-gray-400">Welcome back, {user.email}!</p>
           </div>
           <button
             onClick={handleLogout}
@@ -54,7 +54,7 @@ export default function App() {
             Logout
           </button>
         </div>
-        
+
         <HabitTracker userId={user.uid} />
       </div>
     </div>
