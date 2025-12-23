@@ -1,0 +1,47 @@
+{
+  "name": "Habit Tracker",
+  "short_name": "Habits",
+  "description": "Simple habit tracker with streaks, templates and insights.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/habiticon192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/habiticon512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/habiticon512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["productivity", "health"],
+  "shortcuts": [
+    {
+      "name": "Add Habit",
+      "short_name": "Add",
+      "description": "Quick add a new habit",
+      "url": "/?action=add",
+      "icons": [{ "src": "/habiticon32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "View Dashboard",
+      "short_name": "Dashboard",
+      "description": "Open the dashboard",
+      "url": "/?view=dashboard",
+      "icons": [{ "src": "/habiticon32x32.png", "sizes": "32x32" }]
+    }
+  ],
+  "prefer_related_applications": false
+}
