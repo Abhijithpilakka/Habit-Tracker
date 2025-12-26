@@ -28,8 +28,8 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
-        <div className="text-xl text-gray-600 dark:text-gray-400">Loading...</div>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
+        <div className="text-lg sm:text-xl text-gray-600 dark:text-gray-400">Loading...</div>
       </div>
     );
   }
@@ -40,18 +40,24 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
-      <div className="max-w-4xl mx-auto p-6">
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-2">Habit Tracker</h1>
-            <p className="text-gray-600 dark:text-gray-400">Welcome back, {user.email}!</p>
+      <div className="max-w-4xl mx-auto p-4 sm:p-6">
+        {/* Header with Title and Logout */}
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex-1 min-w-0">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 dark:text-white truncate">
+              Habit Tracker
+            </h1>
+            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 truncate mt-0.5">
+              {user.email}
+            </p>
           </div>
+          
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors text-sm whitespace-nowrap ml-4"
           >
             <LogOut className="w-4 h-4" />
-            Logout
+            <span className="hidden sm:inline">Logout</span>
           </button>
         </div>
 
