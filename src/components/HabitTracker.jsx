@@ -395,15 +395,7 @@ export default function HabitTracker({ userId }) {
         </div>
 
         {/* Right: Action Buttons (40% width on mobile) */}
-        <div className="flex gap-1.5 flex-shrink-0">
-          <button
-            onClick={() => setShowTemplates(true)}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-colors text-sm font-medium whitespace-nowrap"
-          >
-            <Sparkles className="w-4 h-4" />
-            <span className="hidden sm:inline">Templates</span>
-          </button>
-          
+        <div className="flex gap-1.5 flex-shrink-0">  
           <button
             onClick={toggleDarkMode}
             className="p-1.5 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
